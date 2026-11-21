@@ -20,7 +20,7 @@ describe('ProductCardComponent', () => {
   it('emits the product when add button is clicked', () => {
     const { fixture, buttons } = setup(PRODUCTS[0]);
     let emitted: Product | undefined;
-    fixture.componentInstance.addToCart.subscribe(p => (emitted = p));
+    fixture.componentInstance.addToCart.subscribe((p) => (emitted = p));
     buttons[1].click();
     expect(emitted).toEqual(PRODUCTS[0]);
   });

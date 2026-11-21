@@ -18,7 +18,7 @@
     <button type="button" class="secondary" (click)="viewDetails.emit(product().id)">
       დეტალები
     </button>
-    <button type="button" [disabled]="product().inStock" (click)="addToCart.emit(product())">
+    <button type="button" [disabled]="!product().inStock" (click)="addToCart.emit(product())">
       კალათაში
     </button>
   </div>
