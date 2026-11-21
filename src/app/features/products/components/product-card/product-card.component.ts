@@ -8,7 +8,7 @@ import { DiscountPricePipe } from '../../pipes/discount-price.pipe';
   selector: 'app-product-card',
   imports: [CurrencyPipe, TitleCasePipe, DiscountPricePipe, HighlightDirective],
   templateUrl: './product-card.component.html',
-  styleUrl: './product-card.css',
+  styleUrl: './product-card.component.css',
 })
 export class ProductCardComponent {
   readonly product = input.required<Product>();
