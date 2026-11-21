@@ -8,7 +8,7 @@ export class ProductsService {
   private readonly http = inject(HttpClient);
 
   getAll(): Observable<Product[]> {
-    return this.http.get<Product[]>('product.json');
+    return this.http.get<Product[]>('products.json');
   }
 
   getById(id: number): Observable<Product | undefined> {

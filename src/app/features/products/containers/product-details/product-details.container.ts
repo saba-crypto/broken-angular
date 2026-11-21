@@ -19,7 +19,7 @@ export class ProductDetailsContainer {
   private readonly cart = inject(CartService);
 
   public product$ = this.route.paramMap.pipe(
-    map((params) => Number(params.get('id'))),
+    map((params) => Number(params.get('productId'))),
     switchMap((id) => this.productsService.getById(id)),
   );
 
