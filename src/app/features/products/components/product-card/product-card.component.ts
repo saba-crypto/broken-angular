@@ -12,6 +12,6 @@ import { DiscountPricePipe } from '../../pipes/discount-price.pipe';
 })
 export class ProductCardComponent {
   readonly product = input.required<Product>();
-  readonly addToCart = output<Product>();
+  readonly addToCart = output<number>();
   readonly viewDetails = output<number>();
 }
