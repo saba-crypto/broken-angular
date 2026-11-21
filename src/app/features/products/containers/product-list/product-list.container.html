@@ -17,7 +17,11 @@
   } @else {
   <div class="grid">
     @for (p of items; track p) {
-    <app-product-card [product]="p" (add)="addToCart($event)" (viewDetails)="openDetails($event)" />
+    <app-product-card
+      [product]="p"
+      (addToCart)="addToCart($event)"
+      (viewDetails)="openDetails($event)"
+    />
     }
   </div>
   }
