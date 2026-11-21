@@ -6,7 +6,7 @@ import { DiscountPricePipe } from '../../pipes/discount-price.pipe';
 
 @Component({
   selector: 'app-product-card',
-  imports: [CurrencyPipe, TitleCasePipe, DiscountPricePipe],
+  imports: [CurrencyPipe, TitleCasePipe, DiscountPricePipe, HighlightDirective],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.css',
 })
