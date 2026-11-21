@@ -10,7 +10,7 @@ import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-product-list',
-  imports: [RouterLink, ProductCardComponent],
+  imports: [RouterLink, ProductCardComponent, FormsModule],
   templateUrl: './product-list.container.html',
   styleUrl: './product-list.container.css',
 })
@@ -24,7 +24,7 @@ export class ProductListContainer {
   readonly search = signal('');
   readonly products = toSignal(this.productsService.getAll(), { initialValue: [] as Product[] });
   readonly category = toSignal(
-    this.route.queryParamMap.pipe(map(q => (q.get('category') ?? 'all') as CategoryFilter)),
+    this.route.queryParamMap.pipe(map((q) => (q.get('category') ?? 'all') as CategoryFilter)),
     { initialValue: 'all' as CategoryFilter },
   );
 
